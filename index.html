@@ -1,332 +1,860 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to Calm Oasis Spa</title>
-    <meta name="description" content="Discover the ultimate relaxation experience at Calm Oasis Spa. Our expert treatments and serene environment will rejuvenate your mind, body, and soul. Visit us for a range of massage therapies and beauty services designed to elevate your well-being.">
-
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>У этого часа ваш темп — Calm Oasis Spa</title>
+    <meta
+      name="description"
+      content="Камерный городской спа: массаж, уход за лицом и время для себя. Calm Oasis Spa — русскоязычный портфолио-концепт в Москве."
+    />
+    <meta name="theme-color" content="#233f39" />
+    <meta
+      property="og:title"
+      content="У этого часа ваш темп — Calm Oasis Spa"
+    />
+    <meta
+      property="og:description"
+      content="Камерный городской спа: массаж, уход за лицом и время для себя. Calm Oasis Spa — русскоязычный портфолио-концепт в Москве."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Calm Oasis Spa" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="fonts/TenorSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Montserrat-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/treatments.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
-  <body>
+  <body data-page="index.html">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
     <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <a href="index.html" class="header__logo logo">
-            <img src="img/logo.png" alt="logo" />
-          </a>
-          <nav class="header__nav">
-            <ul class="header__menu">
-              <li class="header__menu-item">
-                <a href="index.html" class="header__menu-link"> HOME </a>
-              </li>
-              <li class="header__menu-item header__menu-item--submenu">
-                <a href="index.html#about" class="header__menu-link"> ABOUT </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="services.html" class="header__menu-link"> SERVICES </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="index.html#portfolio" class="header__menu-link">
-                  PORTFOLIO
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="index.html#blog" class="header__menu-link"> BLOG </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <div class="shell header__inner">
+        <a class="brand" href="index.html" aria-label="Calm Oasis Spa — главная"
+          ><img
+            src="img/brand-mark-64.png"
+            width="44"
+            height="44"
+            alt=""
+          /><span class="brand__type"
+            >calm oasis<span class="brand__caption">городской спа</span></span
+          ></a
+        >
+        <nav class="header__nav" aria-label="Основная навигация">
+          <a href="index.html#about">Подход</a
+          ><a href="services.html">Процедуры</a
+          ><a href="index.html#portfolio">Пространство</a
+          ><a href="index.html#blog">Перед визитом</a>
+        </nav>
+        <a
+          class="header__booking"
+          href="#booking"
+          aria-label="Запланировать визит"
+          ><span class="header__booking-label">Запланировать визит</span
+          ><span class="header__booking-short" aria-hidden="true">Запись</span
+          ><img
+            src="img/icon-arrow-up-right.svg"
+            width="20"
+            height="20"
+            alt=""
+            aria-hidden="true" /></a
+        ><button
+          class="header__toggle icon-button"
+          type="button"
+          data-open-menu
+          hidden
+          aria-label="Открыть меню"
+        >
+          <img
+            src="img/icon-menu.svg"
+            width="20"
+            height="20"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
       </div>
     </header>
-    <main>
-      <section class="main">
-        <div class="container">
-          <div class="main__content">
-            <h1 class="main__title">Relaxation</h1>
-            <p class="main__subtitle">YOUR PERFECT PLACE FOR</p>
-            <address class="main__contact">
-              <p>
-                Address:
-                <a href="https://maps.app.goo.gl/WiXNTCmFWEXSjuUq6" class="main__contact-link">
-                  B-13/A, Shanti Nagar, Civil Lines, Jaipur, Rajasthan 302006, India
-                </a>
-              </p>
-              <p class="main__contact-tel">
-                TEL:
-                <a href="tel:913694852369" class="main__contact-link">
-                  +91-369-4852369
-                </a>
-              </p>
-              <p class="main__contact-tel">
-                E-Mail:
-                <a
-                  href="mailto:calmoasisspa@gmail.com"
-                  class="main__contact-link"
-                >
-                  calmoasisspa@gmail.com
-                </a>
-              </p>
-              <p>7 DAYS A WEEK FROM 9:00 AM TO 7:00 PM</p>
-            </address>
-          </div>
-        </div>
-      </section>
-      <section class="welcome" id="about">
-        <div class="container">
-          <div class="welcome__content flex">
-            <div class="welcome__content-left">
-              <h2 class="welcome__title">Welcome</h2>
-              <p class="welcome__subtitle">TO CALM OASIS SPA</p>
-            </div>
-            <div class="welcome__content-right">
-              <p class="welcome__text">
-                Welcome to Calm Oasis Spa, where relaxation and rejuvenation
-                meet. Discover our exceptional spa services designed to
-                revitalize your body and mind. We are conveniently located in
-                two serene spots – Edgewood Station and Lindale Mall. Let us
-                elevate your wellness journey to new heights.
-              </p>
-            </div>
-          </div>
-          <div class="welcome__image-container">
-            <img
-              src="img/welcome.webp"
-              alt="Spa Relaxation Image"
-              class="welcome__image"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="reward">
-        <div class="container">
-          <div class="reward__content">
-            <h2 class="reward__heading">
-              INDULGE IN THE ULTIMATE RELAXATION EXPERIENCE
-            </h2>
-            <p class="reward__text">
-              Treat yourself to a rejuvenating experience that revitalizes your
-              body and recharges your spirit. At Calm Oasis Spa, we are
-              dedicated to meeting the evolving needs of our clients. Our
-              tranquil space offers superior treatments, resources, and
-              education. Our mission is to promote health and well-being within
-              our community.
+    <dialog class="menu-dialog" id="site-menu" aria-labelledby="menu-title">
+      <div class="menu-dialog__top">
+        <h2 id="menu-title">Calm Oasis Spa</h2>
+        <button
+          class="icon-button"
+          type="button"
+          data-close-dialog
+          aria-label="Закрыть меню"
+        >
+          <img
+            src="img/icon-x.svg"
+            width="20"
+            height="20"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+      <nav aria-label="Мобильная навигация">
+        <a href="index.html#about">Наш подход</a
+        ><a href="services.html">Процедуры и цены</a
+        ><a href="index.html#portfolio">Пространство</a
+        ><a href="index.html#blog">Перед визитом</a
+        ><a href="#booking">Запланировать визит</a>
+      </nav>
+      <p>Москва. Ежедневно, 10:00–21:00.</p>
+      <p class="small">Портфолио-концепт. Запись демонстрационная.</p>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="hero">
+        <div class="shell hero__layout">
+          <div class="hero__copy">
+            <p class="hero__location">Calm Oasis Spa, Москва</p>
+            <h1>У этого часа<br />ваш темп.</h1>
+            <p class="hero__intro">
+              Массаж, уход за лицом и простое удовольствие — никуда не
+              торопиться.
             </p>
-            <a href="services.html" class="reward__btn btn">LEARN MORE</a>
+            <a class="button" href="services.html"
+              >Выбрать процедуру<img
+                src="img/icon-arrow-up-right.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+            /></a>
+            <p class="hero__aside">
+              Приходите не за новым списком дел.<br />Приходите за временем для
+              себя.
+            </p>
           </div>
+          <figure class="hero__media">
+            <img
+              src="img/spa-arrival-800.webp"
+              srcset="
+                img/spa-arrival-480.webp   480w,
+                img/spa-arrival-800.webp   800w,
+                img/spa-arrival-1440.webp 1440w
+              "
+              sizes="(max-width: 760px) 100vw, 90vw"
+              width="800"
+              height="533"
+              alt="Женщина в льняном халате у окна частного спа-кабинета"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <figcaption>Город остаётся за дверью.</figcaption>
+          </figure>
         </div>
       </section>
-      <section class="services" id="services">
-        <div class="container">
-          <div class="services__row">
-            <h2 class="services__title">
-              Discover Our Full Range of Massage Services
+      <section
+        class="approach section"
+        id="about"
+        aria-labelledby="approach-title"
+      >
+        <div class="shell approach__layout">
+          <div class="approach__copy">
+            <h2 id="approach-title">Не нужно уметь<br />отдыхать правильно.</h2>
+            <p class="lead">
+              Можно попросить тишины. Или поговорить.<br />Выбрать мягче.
+              Остановиться раньше.
+            </p>
+            <p>
+              Мы начинаем с короткого разговора о том, что вам приятно. Простой
+              вопрос, удобное положение, понятная процедура. Всё остальное может
+              немного подождать.
+            </p>
+            <a class="text-link" href="services.html"
+              >Посмотреть, что вам подходит<img
+                src="img/icon-arrow-up-right.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+            /></a>
+          </div>
+          <figure class="approach__image">
+            <img
+              src="img/spa-nails-800.webp"
+              srcset="
+                img/spa-nails-480.webp   480w,
+                img/spa-nails-800.webp   800w,
+                img/spa-nails-1440.webp 1440w
+              "
+              sizes="(max-width: 760px) 100vw, 50vw"
+              width="800"
+              height="1000"
+              alt="Специалист аккуратно работает с руками гостьи во время маникюра"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              Внимание начинается до первого прикосновения.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section
+        class="treatments section"
+        id="services"
+        aria-labelledby="treatments-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <h2 id="treatments-title">
+              Начните с того,<br />чего хочется сегодня.
             </h2>
+            <p>
+              Длительность и стоимость видны сразу.<br />Цены демонстрационные.
+            </p>
           </div>
-          <div class="services__content">
-            <div class="services__item">
-              <h3 class="services__item-title">SWEDISH MASSAGE</h3>
-              <p class="services__item-description">
-                Experience the benefits of regular facial skin care sessions to
-                maintain your health and youthful appearance. We understand your
-                needs better than anyone else!
-              </p>
-              <a href="services.html" class="btn">READ MORE</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">DEEP TISSUE MASSAGE</h3>
-              <p class="services__item-description">
-                Calm Oasis Spa offers a luxurious spa experience and a serene
-                escape from the city's stresses. Located in the heart of Jaipur,
-                we provide top-tier luxury spa services.
-              </p>
-              <a href="services.html" class="btn">READ MORE</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">HOT STONES THERAPY</h3>
-              <p class="services__item-description">
-                Our community-focused gift includes a safe space, superior
-                treatments, resources, and education. We strive to promote
-                health and well-being for everyone in our area.
-              </p>
-              <a href="services.html" class="btn">READ MORE</a>
+          <div class="treatments__layout">
+            <figure class="treatments__photo" data-treatment-photo>
+              <img
+                src="img/spa-hands-800.webp"
+                srcset="
+                  img/spa-hands-480.webp   480w,
+                  img/spa-hands-800.webp   800w,
+                  img/spa-hands-1440.webp 1440w
+                "
+                sizes="(max-width: 760px) 100vw, 50vw"
+                width="800"
+                height="1000"
+                alt="Спокойный массаж плеч через льняной халат"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Без спешки — на каждом этапе.</figcaption>
+            </figure>
+            <div class="treatments__list">
+              <details
+                class="treatment"
+                id="home-relax"
+                data-treatment="relax"
+                open
+              >
+                <summary>
+                  <span class="treatment__name">Расслабляющий массаж</span
+                  ><span class="treatment__meta"
+                    >60 мин<span>4 900 ₽</span></span
+                  ><span class="treatment__toggle" aria-hidden="true"
+                    ><img
+                      loading="lazy"
+                      src="img/icon-plus.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      aria-hidden="true"
+                  /></span>
+                </summary>
+                <div class="disclosure__content">
+                  <div class="treatment__body">
+                    <p>
+                      Плавные движения и спокойный темп. Сначала обсудим
+                      пожелания, затем устроимся так, чтобы вам было удобно.
+                    </p>
+                    <a class="text-link" href="#booking" data-choose="relax"
+                      >Выбрать эту процедуру<img
+                        src="img/icon-arrow-up-right.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></a>
+                  </div>
+                </div>
+              </details>
+              <details class="treatment" id="home-stone" data-treatment="stone">
+                <summary>
+                  <span class="treatment__name">Массаж тёплыми камнями</span
+                  ><span class="treatment__meta"
+                    >75 мин<span>6 900 ₽</span></span
+                  ><span class="treatment__toggle" aria-hidden="true"
+                    ><img
+                      loading="lazy"
+                      src="img/icon-plus.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      aria-hidden="true"
+                  /></span>
+                </summary>
+                <div class="disclosure__content">
+                  <div class="treatment__body">
+                    <p>
+                      Сочетание ручного массажа и плавного тепла гладких камней.
+                      Для тех, кому хочется особенно неспешной процедуры.
+                    </p>
+                    <a class="text-link" href="#booking" data-choose="stone"
+                      >Выбрать эту процедуру<img
+                        src="img/icon-arrow-up-right.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></a>
+                  </div>
+                </div>
+              </details>
+              <details
+                class="treatment"
+                id="home-facial"
+                data-treatment="facial"
+              >
+                <summary>
+                  <span class="treatment__name">Базовый уход за лицом</span
+                  ><span class="treatment__meta"
+                    >45 мин<span>3 900 ₽</span></span
+                  ><span class="treatment__toggle" aria-hidden="true"
+                    ><img
+                      loading="lazy"
+                      src="img/icon-plus.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      aria-hidden="true"
+                  /></span>
+                </summary>
+                <div class="disclosure__content">
+                  <div class="treatment__body">
+                    <p>
+                      Понятная последовательность ухода: очищение, маска и крем.
+                      Подходит для знакомства с пространством и самой
+                      процедурой.
+                    </p>
+                    <a class="text-link" href="#booking" data-choose="facial"
+                      >Выбрать эту процедуру<img
+                        src="img/icon-arrow-up-right.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></a>
+                  </div>
+                </div>
+              </details>
+              <details
+                class="treatment"
+                id="home-manicure"
+                data-treatment="manicure"
+              >
+                <summary>
+                  <span class="treatment__name">Маникюр без покрытия</span
+                  ><span class="treatment__meta"
+                    >45 мин<span>2 400 ₽</span></span
+                  ><span class="treatment__toggle" aria-hidden="true"
+                    ><img
+                      loading="lazy"
+                      src="img/icon-plus.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                      aria-hidden="true"
+                  /></span>
+                </summary>
+                <div class="disclosure__content">
+                  <div class="treatment__body">
+                    <p>
+                      Аккуратная обработка, выбранная вами форма и завершающий
+                      уход для рук. Чистый естественный результат.
+                    </p>
+                    <a class="text-link" href="#booking" data-choose="manicure"
+                      >Выбрать эту процедуру<img
+                        src="img/icon-arrow-up-right.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></a>
+                  </div>
+                </div>
+              </details>
+              <a class="text-link treatments__all" href="services.html"
+                >Все процедуры и цены<img
+                  loading="lazy"
+                  src="img/icon-arrow-right.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+              /></a>
             </div>
           </div>
         </div>
       </section>
-      <section class="portfolio" id="portfolio">
-        <div class="container">
-          <div class="portfolio__content">
-            <div class="portfolio__content_offer">
-              <h2 class="portfolio__heading">Our Portfolio</h2>
-              <p class="portfolio__subtitle">EXPERIENCE TRANQUILITY</p>
-              <a href="services.html" class="btn">Explore Services</a>
-            </div>
-            <div class="portfolio__content_img">
-              <img
-                src="img/portfolio-1.jpeg"
-                alt="Massage Service"
-                class="portfolio__image"
-              />
-              <div class="portfolio__image-overlay">
-                <p class="portfolio__image-caption">DEEP TISSUE MASSAGE</p>
-              </div>
-            </div>
+      <section
+        class="space section"
+        id="portfolio"
+        aria-labelledby="space-title"
+      >
+        <div class="shell">
+          <div class="space__heading">
+            <h2 id="space-title">Место, где можно<br />сбавить громкость.</h2>
+            <p>
+              Мягкий свет, прохладный оттенок стен, чистый лён. Пространство,
+              которое не требует внимания, а оставляет его вам.
+            </p>
           </div>
-          <div class="portfolio__img_wrap">
-            <div class="portfolio__image-container">
+          <figure class="space__scene">
+            <button
+              class="space__photo-button"
+              type="button"
+              data-photo="spa-studio"
+              aria-label="Рассмотреть зону отдыха"
+            >
               <img
-                src="img/portfolio-2.webp"
-                alt="Man receiving back massage"
-                class="portfolio__image"
+                src="img/spa-studio-800.webp"
+                srcset="
+                  img/spa-studio-480.webp   480w,
+                  img/spa-studio-800.webp   800w,
+                  img/spa-studio-1440.webp 1440w
+                "
+                sizes="(max-width: 760px) 100vw, 90vw"
+                width="800"
+                height="533"
+                alt="Зона отдыха с зелёной плиткой, деревянными креслами и рифлёным стеклом"
+                loading="lazy"
+                decoding="async"
+              /><img
+                loading="lazy"
+                class="space__enlarge"
+                src="img/icon-plus.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
               />
-            </div>
-            <div class="portfolio__image-container">
+            </button>
+            <figcaption>
+              Пространство Calm Oasis Spa. Визуальная концепция.
+            </figcaption>
+          </figure>
+          <div class="space__detail">
+            <figure>
               <img
-                src="img/portfolio-3.jpeg"
-                alt="Woman receiving shoulder massage"
-                class="portfolio__image"
+                src="img/spa-ritual-800.webp"
+                srcset="
+                  img/spa-ritual-480.webp   480w,
+                  img/spa-ritual-800.webp   800w,
+                  img/spa-ritual-1440.webp 1440w
+                "
+                sizes="(max-width: 760px) 100vw, 50vw"
+                width="800"
+                height="533"
+                alt="Мастер готовит тёплые камни на подносе с чистым льном"
+                loading="lazy"
+                decoding="async"
               />
-            </div>
-            <div class="portfolio__image-container">
-              <img
-                src="img/portfolio-4.jpeg"
-                alt="Woman receiving shoulder massage"
-                class="portfolio__image"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="blog" id="blog">
-        <div class="container">
-          <div class="blog__content">
-            <h2 class="blog__heading">The Latest in Massage Therapy</h2>
-            <div class="blog__items">
-              <div class="blog__item">
-                <img
-                  src="img/blog-1.jpeg"
-                  alt="Blog Image"
-                  class="blog__image"
-                />
-                <h3 class="blog__title">
-                  THE BENEFITS OF AROMATHERAPY MASSAGE
-                </h3>
-                <div class="blog__date-wrap">
-                  <p class="blog__date">10.05.2024</p>
-                  <p class="blog__author">Sarah Johnson</p>
-                </div>
-                <p class="blog__description">
-                  Explore how essential oils can enhance your massage experience
-                  and improve your overall well-being...
-                </p>
-              </div>
-              <div class="blog__item">
-                <img
-                  src="img/blog-2.webp"
-                  alt="Blog Image"
-                  class="blog__image"
-                />
-                <h3 class="blog__title">
-                  CHOOSING THE RIGHT MASSAGE TECHNIQUE
-                </h3>
-                <div class="blog__date-wrap">
-                  <p class="blog__date">15.06.2024</p>
-                  <p class="blog__author">David Lee</p>
-                </div>
-                <p class="blog__description">
-                  A guide to selecting the best massage technique for your
-                  specific needs and preferences...
-                </p>
-              </div>
-              <div class="blog__item">
-                <img
-                  src="img/blog-3.webp"
-                  alt="Blog Image"
-                  class="blog__image"
-                />
-                <h3 class="blog__title">UNDERSTANDING DEEP TISSUE MASSAGE</h3>
-                <div class="blog__date-wrap">
-                  <p class="blog__date">30.07.2024</p>
-                  <p class="blog__author">Michael Brown</p>
-                </div>
-                <p class="blog__description">
-                  Learn about the benefits and techniques of deep tissue massage
-                  for muscle recovery and relaxation...
-                </p>
-              </div>
+              <figcaption>
+                Маленькие приготовления. Большое внимание.
+              </figcaption>
+            </figure>
+            <div>
+              <h3>До и после —<br />тоже часть визита.</h3>
+              <p>
+                Дайте себе несколько минут освоиться. После процедуры не
+                обязательно сразу возвращаться в быстрый режим: можно посидеть,
+                выпить воды и собраться в своём темпе.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="reservation" id="index-form">
-        <div class="container">
-          <div class="reservation__content">
-            <p class="reservation__title">Book Your Relaxation</p>
-            <p class="reservation__subtitle">SCHEDULE YOUR SESSION</p>
-            <form class="reservation__form" id="contact_form">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="reservation__input"
-                placeholder="Your Name*"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="reservation__input"
-                placeholder="Your Email*"
-                required
-              />
-              <textarea
-                id="message"
-                class="reservation__textarea"
-                rows="3"
-                name="message"
-                placeholder="Your Message*"
-                required
-              ></textarea>
-              <div class="form-checkbox flex">
-                <input
-                  type="checkbox"
-                  name="privacy"
-                  value="on"
-                  id="checkbox"
+      <section class="notes section" id="blog" aria-labelledby="notes-title">
+        <div class="shell notes__layout">
+          <div>
+            <h2 id="notes-title">Перед встречей.</h2>
+            <p>
+              Несколько простых ответов,<br />чтобы чувствовать себя свободнее.
+            </p>
+          </div>
+          <div class="notes__list">
+            <details class="note">
+              <summary>
+                Что выбрать для первого визита?<span
+                  class="note__toggle"
+                  aria-hidden="true"
+                  ><img
+                    loading="lazy"
+                    src="img/icon-plus.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                    aria-hidden="true"
+                /></span>
+              </summary>
+              <div class="disclosure__content">
+                <div class="note__body">
+                  <p>
+                    Можно начать с расслабляющего массажа или базового ухода за
+                    лицом. А если хочется сначала разобраться — выберите в форме
+                    «Помогите выбрать» и напишите о своих предпочтениях.
+                  </p>
+                </div>
+              </div>
+            </details>
+            <details class="note">
+              <summary>
+                Что взять с собой?<span class="note__toggle" aria-hidden="true"
+                  ><img
+                    loading="lazy"
+                    src="img/icon-plus.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                    aria-hidden="true"
+                /></span>
+              </summary>
+              <div class="disclosure__content">
+                <div class="note__body">
+                  <p>
+                    Ничего особенного. Для процедур в одежде пригодится
+                    свободный комплект, в котором удобно двигаться. Детали
+                    конкретного визита обычно уточняют при подтверждении записи.
+                  </p>
+                </div>
+              </div>
+            </details>
+            <details class="note">
+              <summary>
+                Можно ли изменить интенсивность?<span
+                  class="note__toggle"
+                  aria-hidden="true"
+                  ><img
+                    loading="lazy"
+                    src="img/icon-plus.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                    aria-hidden="true"
+                /></span>
+              </summary>
+              <div class="disclosure__content">
+                <div class="note__body">
+                  <p>
+                    Да. Вы можете попросить мягче, сделать паузу или завершить
+                    процедуру. Комфорт не нужно терпеть — о нём можно говорить.
+                  </p>
+                </div>
+              </div>
+            </details>
+            <details class="note">
+              <summary>
+                Как работает запись на этом сайте?<span
+                  class="note__toggle"
+                  aria-hidden="true"
+                  ><img
+                    loading="lazy"
+                    src="img/icon-plus.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                    aria-hidden="true"
+                /></span>
+              </summary>
+              <div class="disclosure__content">
+                <div class="note__body">
+                  <p>
+                    Это портфолио-концепт. Форма помогает попробовать выбор
+                    процедуры, но не отправляет контакты и не бронирует время.
+                    На странице результата будет только выбранная услуга.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section
+        class="booking section"
+        id="booking"
+        aria-labelledby="booking-title"
+      >
+        <div class="shell booking__layout">
+          <div class="booking__intro">
+            <h2 id="booking-title">Давайте оставим<br />время для вас.</h2>
+            <p>
+              Выберите процедуру и удобный день. Если пока не определились —
+              начните с разговора о пожеланиях.
+            </p>
+            <div class="booking__location">
+              <p>Москва. Ежедневно, 10:00–21:00.</p>
+              <a href="mailto:hello@calmoasis.example"
+                >hello@calmoasis.example</a
+              >
+            </div>
+            <p class="booking__demo">
+              Это демонстрационная форма для портфолио. Данные никуда не
+              отправляются; реальная запись и оплата не создаются.
+            </p>
+          </div>
+          <form
+            class="booking__form"
+            id="visit-form"
+            novalidate
+            aria-labelledby="visit-form-title"
+          >
+            <div class="booking__form-heading">
+              <h3 id="visit-form-title">Запланировать визит</h3>
+              <p>Начните с процедуры, которая подходит вашему дню.</p>
+            </div>
+            <div class="form-errors" tabindex="-1" hidden>
+              <h3>Проверьте заполнение</h3>
+              <ul></ul>
+            </div>
+            <fieldset disabled class="booking__fields">
+              <legend class="sr-only">Параметры визита и контакты</legend>
+              <div class="field">
+                <label for="treatment"
+                  >С чего начнём? <span>обязательно</span></label
+                ><select
+                  id="treatment"
+                  name="treatment"
                   required
-                />
-                <a for="privacy" href="privacy-policy.html"
-                  >I accept Privacy policy</a
+                  aria-describedby="treatment-error"
+                >
+                  <option value="">Выберите процедуру</option>
+                  <option value="relax">Расслабляющий массаж · 60 мин</option>
+                  <option value="deep">Глубокий массаж · 60 мин</option>
+                  <option value="stone">Массаж тёплыми камнями · 75 мин</option>
+                  <option value="aroma">Аромамассаж · 60 мин</option>
+                  <option value="thai">Тайский массаж · 60 мин</option>
+                  <option value="feet">Массаж стоп · 30 мин</option>
+                  <option value="local">Локальный массаж · 30 мин</option>
+                  <option value="scrub">Скраб для тела · 45 мин</option>
+                  <option value="balance">Балансирующий уход · 60 мин</option>
+                  <option value="facial">Базовый уход за лицом · 45 мин</option>
+                  <option value="personal">Индивидуальный уход · 60 мин</option>
+                  <option value="renew">Обновляющий уход · 60 мин</option>
+                  <option value="extended">Расширенный уход · 75 мин</option>
+                  <option value="manicure">
+                    Маникюр без покрытия · 45 мин
+                  </option>
+                  <option value="pedicure">
+                    Педикюр без покрытия · 60 мин
+                  </option>
+                  <option value="handcare">Маникюр с уходом · 60 мин</option>
+                  <option value="hands">Уход для рук · 30 мин</option>
+                  <option value="footcare">Уход для стоп · 45 мин</option>
+                  <option value="consult">Помогите выбрать</option>
+                  <option value="gift">Подарочный сертификат</option>
+                </select>
+                <p class="field__error" id="treatment-error" hidden></p>
+              </div>
+              <div
+                class="booking__selection"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                <p data-selection-name>Выбор за вами</p>
+                <p data-selection-meta>
+                  Длительность и стоимость появятся здесь.
+                </p>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="visitor-name"
+                    >Ваше имя <span>обязательно</span></label
+                  ><input
+                    id="visitor-name"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="100"
+                    required
+                    aria-describedby="visitor-name-error"
+                  />
+                  <p class="field__error" id="visitor-name-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="visitor-email"
+                    >Email <span>обязательно</span></label
+                  ><input
+                    id="visitor-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                    aria-describedby="visitor-email-error"
+                  />
+                  <p class="field__error" id="visitor-email-error" hidden></p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="visitor-phone"
+                    >Телефон <span>необязательно</span></label
+                  ><input
+                    id="visitor-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    maxlength="30"
+                    aria-describedby="visitor-phone-error"
+                  />
+                  <p class="field__error" id="visitor-phone-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="visit-day"
+                    >Желаемый день <span>необязательно</span></label
+                  ><input
+                    id="visit-day"
+                    name="day"
+                    type="date"
+                    aria-describedby="visit-day-note"
+                  />
+                  <p class="field__hint" id="visit-day-note">
+                    Не подтверждает свободное время.
+                  </p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="visitor-message"
+                  >Что для вас важно? <span>необязательно</span></label
+                ><textarea
+                  id="visitor-message"
+                  name="message"
+                  rows="2"
+                  maxlength="1000"
+                  placeholder="Например, предпочтения по темпу и интенсивности"
+                ></textarea>
+              </div>
+              <div class="consent">
+                <input
+                  id="consent"
+                  type="checkbox"
+                  required
+                  aria-describedby="consent-error"
+                /><label for="consent"
+                  >Я ознакомился с
+                  <a href="privacy-policy.html">информацией о данных</a> и
+                  <a href="terms-conditions.html">условиями демоверсии</a
+                  >.</label
                 >
               </div>
-              <button type="submit" class="btn">SEND</button>
-            </form>
-          </div>
+              <p class="field__error" id="consent-error" hidden></p>
+              <button class="button booking__submit" type="submit">
+                Проверить мой выбор<img
+                  loading="lazy"
+                  src="img/icon-arrow-right.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+              <p class="form-status" role="status"></p>
+            </fieldset>
+            <noscript
+              ><p>
+                Для проверки формы нужен JavaScript. Все процедуры и цены
+                доступны на странице услуг.
+              </p></noscript
+            >
+          </form>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div class="social__content">
-          <a href="index.html" class="header__logo logo">
-            <img src="img/logo.png" alt="logo" />
-          </a>
-          ©. All rights reserved.
-          <div class="footer_bot flex">
-            <a href="privacy-policy.html" class="footer__bot-policy"
-              >Privacy policy</a
+      <div class="shell">
+        <div class="footer__top">
+          <p class="footer__invitation">
+            Оставьте немного<br />времени для себя.
+          </p>
+          <a class="footer__cta" href="#booking"
+            >Начать с одной процедуры<img
+              src="img/icon-arrow-up-right.svg"
+              width="20"
+              height="20"
+              alt=""
+              aria-hidden="true"
+          /></a>
+        </div>
+        <div class="footer__grid">
+          <div>
+            <a
+              class="brand"
+              href="index.html"
+              aria-label="Calm Oasis Spa — главная"
+              ><img
+                src="img/brand-mark-64.png"
+                width="44"
+                height="44"
+                alt=""
+              /><span class="brand__type"
+                >calm oasis<span class="brand__caption"
+                  >городской спа</span
+                ></span
+              ></a
             >
-            <a href="terms-conditions.html" class="footer__bot-policy"
-              >Terms and Conditions</a
-            >
+            <p class="footer__description">
+              Тёплое отношение.<br />Спокойный темп.<br />Ваши собственные
+              ощущения.
+            </p>
           </div>
+          <nav aria-label="Навигация в подвале">
+            <a href="services.html">Процедуры и цены</a
+            ><a href="index.html#portfolio">Наше пространство</a
+            ><a href="index.html#blog">Перед визитом</a
+            ><a href="#booking">Демонстрационная запись</a>
+          </nav>
+          <div>
+            <p>Москва, ул. Тихая, 8</p>
+            <p class="small">Вымышленный адрес для концепта.</p>
+            <a href="tel:+74950000000">+7 (495) 000-00-00</a
+            ><a href="mailto:hello@calmoasis.example"
+              >hello@calmoasis.example</a
+            >
+            <p>Ежедневно, 10:00–21:00</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Calm Oasis Spa · Портфолио-концепт</p>
+          <div>
+            <a href="privacy-policy.html">Личные данные</a
+            ><a href="terms-conditions.html">Условия демоверсии</a>
+          </div>
+          <a href="#main">К началу страницы</a>
         </div>
       </div>
     </footer>
+    <dialog
+      class="photo-dialog"
+      id="photo-view"
+      aria-label="Фотография пространства"
+    >
+      <button
+        class="icon-button"
+        type="button"
+        data-close-dialog
+        aria-label="Закрыть фотографию"
+      >
+        <img
+          src="img/icon-x.svg"
+          width="20"
+          height="20"
+          alt=""
+          aria-hidden="true"
+        /></button
+      ><img width="1440" height="960" alt="" data-full-photo />
+    </dialog>
+    <div
+      class="live-status sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
   </body>
 </html>

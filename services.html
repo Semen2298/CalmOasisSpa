@@ -1,385 +1,1205 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services - Calm Oasis Spa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Процедуры и цены — Calm Oasis Spa</title>
     <meta
       name="description"
-      content="Explore the variety of services offered at Calm Oasis Spa, including Swedish massage, deep tissue massage, hot stones therapy, and more. Experience relaxation and rejuvenation with our expert treatments."
+      content="18 процедур для тела, лица, рук и стоп: описание, длительность и демонстрационные цены. Выбор услуги без отправки личных данных."
     />
-
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-
+    <meta name="theme-color" content="#233f39" />
+    <meta property="og:title" content="Процедуры и цены — Calm Oasis Spa" />
+    <meta
+      property="og:description"
+      content="18 процедур для тела, лица, рук и стоп: описание, длительность и демонстрационные цены. Выбор услуги без отправки личных данных."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Calm Oasis Spa" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="fonts/TenorSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/Montserrat-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/treatments.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
-  <body>
+  <body data-page="services.html">
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
     <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <a href="index.html" class="header__logo logo">
-            <img src="img/logo.png" alt="logo" />
-          </a>
-          <nav class="header__nav">
-            <ul class="header__menu">
-              <li class="header__menu-item">
-                <a href="index.html" class="header__menu-link"> HOME </a>
-              </li>
-              <li class="header__menu-item header__menu-item--submenu">
-                <a href="index.html#about" class="header__menu-link"> ABOUT </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="index.html#services" class="header__menu-link">
-                  SERVICES
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="index.html#portfolio" class="header__menu-link">
-                  PORTFOLIO
-                </a>
-              </li>
-              <li class="header__menu-item">
-                <a href="index.html#blog" class="header__menu-link"> BLOG </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <div class="shell header__inner">
+        <a class="brand" href="index.html" aria-label="Calm Oasis Spa — главная"
+          ><img
+            src="img/brand-mark-64.png"
+            width="44"
+            height="44"
+            alt=""
+          /><span class="brand__type"
+            >calm oasis<span class="brand__caption">городской спа</span></span
+          ></a
+        >
+        <nav class="header__nav" aria-label="Основная навигация">
+          <a href="index.html#about">Подход</a
+          ><a href="services.html">Процедуры</a
+          ><a href="index.html#portfolio">Пространство</a
+          ><a href="index.html#blog">Перед визитом</a>
+        </nav>
+        <a
+          class="header__booking"
+          href="#booking"
+          aria-label="Запланировать визит"
+          ><span class="header__booking-label">Запланировать визит</span
+          ><span class="header__booking-short" aria-hidden="true">Запись</span
+          ><img
+            src="img/icon-arrow-up-right.svg"
+            width="20"
+            height="20"
+            alt=""
+            aria-hidden="true" /></a
+        ><button
+          class="header__toggle icon-button"
+          type="button"
+          data-open-menu
+          hidden
+          aria-label="Открыть меню"
+        >
+          <img
+            src="img/icon-menu.svg"
+            width="20"
+            height="20"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
       </div>
     </header>
-    <main>
-      <section class="services-page-main">
-        <div class="container">
-          <h1 class="services-page__title">Services</h1>
-          <div class="services-page__links">
-            <a href="index.html" class="services-page__link"> HOME </a>
-            >
-            <a href="services.html" class="services-page__link"> SERVICES </a>
+    <dialog class="menu-dialog" id="site-menu" aria-labelledby="menu-title">
+      <div class="menu-dialog__top">
+        <h2 id="menu-title">Calm Oasis Spa</h2>
+        <button
+          class="icon-button"
+          type="button"
+          data-close-dialog
+          aria-label="Закрыть меню"
+        >
+          <img
+            src="img/icon-x.svg"
+            width="20"
+            height="20"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+      <nav aria-label="Мобильная навигация">
+        <a href="index.html#about">Наш подход</a
+        ><a href="services.html">Процедуры и цены</a
+        ><a href="index.html#portfolio">Пространство</a
+        ><a href="index.html#blog">Перед визитом</a
+        ><a href="#booking">Запланировать визит</a>
+      </nav>
+      <p>Москва. Ежедневно, 10:00–21:00.</p>
+      <p class="small">Портфолио-концепт. Запись демонстрационная.</p>
+    </dialog>
+    <main id="main" tabindex="-1">
+      <section class="page-intro shell">
+        <p class="breadcrumbs">
+          <a href="index.html">Главная</a><span aria-hidden="true">/</span
+          ><span>Процедуры</span>
+        </p>
+        <h1>Выберите своё<br />время для себя.</h1>
+        <p>
+          От короткой паузы до обстоятельного ухода.<br />Здесь можно спокойно
+          сравнить и решить.
+        </p>
+      </section>
+      <section class="catalog section" aria-labelledby="catalog-title">
+        <div class="shell">
+          <div class="section-heading">
+            <h2 id="catalog-title">Меню процедур</h2>
+            <p>
+              Цены — часть демонстрационной концепции.<br />Медицинские услуги
+              не предлагаются.
+            </p>
+          </div>
+          <div
+            class="catalog__filters"
+            role="group"
+            aria-label="Направления процедур"
+            hidden
+          >
+            <button type="button" data-category="all" aria-pressed="true">
+              Всё меню</button
+            ><button type="button" data-category="body" aria-pressed="false">
+              Тело</button
+            ><button type="button" data-category="face" aria-pressed="false">
+              Лицо</button
+            ><button type="button" data-category="nails" aria-pressed="false">
+              Руки и стопы
+            </button>
+          </div>
+          <p class="catalog__status sr-only" role="status"></p>
+          <div class="catalog__layout">
+            <div class="catalog__menu">
+              <section
+                class="catalog__group"
+                data-group="body"
+                aria-labelledby="group-body"
+              >
+                <h3 id="group-body">Для тела</h3>
+                <details
+                  class="treatment"
+                  id="catalog-relax"
+                  data-treatment="relax"
+                >
+                  <summary>
+                    <span class="treatment__name">Расслабляющий массаж</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>4 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Плавные движения и спокойный темп. Сначала обсудим
+                        пожелания, затем устроимся так, чтобы вам было удобно.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="relax"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-deep"
+                  data-treatment="deep"
+                >
+                  <summary>
+                    <span class="treatment__name">Глубокий массаж</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>5 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Более плотная работа с мышцами. Интенсивность согласуем
+                        до начала и сможем изменить во время сеанса.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="deep"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-stone"
+                  data-treatment="stone"
+                >
+                  <summary>
+                    <span class="treatment__name">Массаж тёплыми камнями</span
+                    ><span class="treatment__meta"
+                      >75 мин<span>6 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Сочетание ручного массажа и плавного тепла гладких
+                        камней. Для тех, кому хочется особенно неспешной
+                        процедуры.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="stone"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-aroma"
+                  data-treatment="aroma"
+                >
+                  <summary>
+                    <span class="treatment__name">Аромамассаж</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>5 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Мягкий массаж с маслом. Аромат подбираем вместе: он
+                        должен нравиться именно вам, а не быть обязательной
+                        частью программы.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="aroma"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-thai"
+                  data-treatment="thai"
+                >
+                  <summary>
+                    <span class="treatment__name">Тайский массаж</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>5 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Процедура в удобной одежде с мягкими вытяжениями и
+                        работой по телу. Темп и амплитуду подстроим под ваши
+                        ощущения.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="thai"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-feet"
+                  data-treatment="feet"
+                >
+                  <summary>
+                    <span class="treatment__name">Массаж стоп</span
+                    ><span class="treatment__meta"
+                      >30 мин<span>2 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Полчаса внимания стопам и голеням. Можно выбрать
+                        отдельно или добавить к более длинному визиту.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="feet"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-local"
+                  data-treatment="local"
+                >
+                  <summary>
+                    <span class="treatment__name">Локальный массаж</span
+                    ><span class="treatment__meta"
+                      >30 мин<span>2 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Короткая процедура с акцентом на выбранную зону.
+                        Подойдёт, когда в расписании есть только небольшая
+                        пауза.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="local"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-scrub"
+                  data-treatment="scrub"
+                >
+                  <summary>
+                    <span class="treatment__name">Скраб для тела</span
+                    ><span class="treatment__meta"
+                      >45 мин<span>3 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Бережное отшелушивание и завершающий уход. Текстуру
+                        средства и комфортное давление обсудим заранее.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="scrub"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+              </section>
+              <section
+                class="catalog__group"
+                data-group="face"
+                aria-labelledby="group-face"
+              >
+                <h3 id="group-face">Для лица</h3>
+                <details
+                  class="treatment"
+                  id="catalog-balance"
+                  data-treatment="balance"
+                >
+                  <summary>
+                    <span class="treatment__name">Балансирующий уход</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>4 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Очищение, мягкая маска и завершающий уход. Без спешки и
+                        сложных обещаний: внимание к ощущениям и комфортной
+                        текстуре.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="balance"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-facial"
+                  data-treatment="facial"
+                >
+                  <summary>
+                    <span class="treatment__name">Базовый уход за лицом</span
+                    ><span class="treatment__meta"
+                      >45 мин<span>3 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Понятная последовательность ухода: очищение, маска и
+                        крем. Подходит для знакомства с пространством и самой
+                        процедурой.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="facial"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-personal"
+                  data-treatment="personal"
+                >
+                  <summary>
+                    <span class="treatment__name">Индивидуальный уход</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>5 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Поговорим о привычном уходе и предпочтениях, затем
+                        выберем текстуры для вашего визита. Все этапы можно
+                        обсудить заранее.
+                      </p>
+                      <a
+                        class="text-link"
+                        href="#booking"
+                        data-choose="personal"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-renew"
+                  data-treatment="renew"
+                >
+                  <summary>
+                    <span class="treatment__name">Обновляющий уход</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>5 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Уход с мягким отшелушиванием и маской. Деликатный формат
+                        без аппаратных процедур и длительного восстановления.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="renew"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-extended"
+                  data-treatment="extended"
+                >
+                  <summary>
+                    <span class="treatment__name">Расширенный уход</span
+                    ><span class="treatment__meta"
+                      >75 мин<span>6 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Больше времени на последовательный уход и спокойный
+                        массаж лица. Состав программы согласуем перед началом.
+                      </p>
+                      <a
+                        class="text-link"
+                        href="#booking"
+                        data-choose="extended"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+              </section>
+              <section
+                class="catalog__group"
+                data-group="nails"
+                aria-labelledby="group-nails"
+              >
+                <h3 id="group-nails">Для рук и стоп</h3>
+                <details
+                  class="treatment"
+                  id="catalog-manicure"
+                  data-treatment="manicure"
+                >
+                  <summary>
+                    <span class="treatment__name">Маникюр без покрытия</span
+                    ><span class="treatment__meta"
+                      >45 мин<span>2 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Аккуратная обработка, выбранная вами форма и завершающий
+                        уход для рук. Чистый естественный результат.
+                      </p>
+                      <a
+                        class="text-link"
+                        href="#booking"
+                        data-choose="manicure"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-pedicure"
+                  data-treatment="pedicure"
+                >
+                  <summary>
+                    <span class="treatment__name">Педикюр без покрытия</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>3 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Деликатный уход за стопами и ногтями без декоративного
+                        покрытия. Удобный самостоятельный визит.
+                      </p>
+                      <a
+                        class="text-link"
+                        href="#booking"
+                        data-choose="pedicure"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-handcare"
+                  data-treatment="handcare"
+                >
+                  <summary>
+                    <span class="treatment__name">Маникюр с уходом</span
+                    ><span class="treatment__meta"
+                      >60 мин<span>3 400 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Маникюр и дополнительный уход за кожей рук. Для тех,
+                        кому важны не только форма, но и сам процесс.
+                      </p>
+                      <a
+                        class="text-link"
+                        href="#booking"
+                        data-choose="handcare"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-hands"
+                  data-treatment="hands"
+                >
+                  <summary>
+                    <span class="treatment__name">Уход для рук</span
+                    ><span class="treatment__meta"
+                      >30 мин<span>1 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Небольшая пауза с мягким массажем кистей и питательным
+                        уходом. Без обработки ногтей.
+                      </p>
+                      <a class="text-link" href="#booking" data-choose="hands"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+                <details
+                  class="treatment"
+                  id="catalog-footcare"
+                  data-treatment="footcare"
+                >
+                  <summary>
+                    <span class="treatment__name">Уход для стоп</span
+                    ><span class="treatment__meta"
+                      >45 мин<span>2 900 ₽</span></span
+                    ><span class="treatment__toggle" aria-hidden="true"
+                      ><img
+                        loading="lazy"
+                        src="img/icon-plus.svg"
+                        width="20"
+                        height="20"
+                        alt=""
+                        aria-hidden="true"
+                    /></span>
+                  </summary>
+                  <div class="disclosure__content">
+                    <div class="treatment__body">
+                      <p>
+                        Мягкий уход, тёплое полотенце и внимание к комфорту.
+                        Можно соединить с другой процедурой.
+                      </p>
+                      <a
+                        class="text-link"
+                        href="#booking"
+                        data-choose="footcare"
+                        >Выбрать эту процедуру<img
+                          src="img/icon-arrow-up-right.svg"
+                          width="20"
+                          height="20"
+                          alt=""
+                          aria-hidden="true"
+                      /></a>
+                    </div>
+                  </div>
+                </details>
+              </section>
+            </div>
+            <aside class="catalog__aside">
+              <figure>
+                <img
+                  class="catalog__image"
+                  src="img/spa-hands-800.webp"
+                  srcset="
+                    img/spa-hands-480.webp   480w,
+                    img/spa-hands-800.webp   800w,
+                    img/spa-hands-1440.webp 1440w
+                  "
+                  sizes="(max-width: 760px) 100vw, 50vw"
+                  width="800"
+                  height="1000"
+                  alt="Тихая процедура в мягком дневном свете"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>Не уверены в выборе?</figcaption>
+              </figure>
+              <p>
+                Начните с пожеланий к визиту. Интенсивность, длительность и
+                детали можно обсудить.
+              </p>
+              <a class="text-link" href="#booking" data-choose="consult"
+                >Помогите мне выбрать<img
+                  src="img/icon-arrow-up-right.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+              /></a>
+            </aside>
           </div>
         </div>
       </section>
-      <section class="services services-page">
-        <div class="container">
-          <div class="services__row">
-            <h2 class="services__title">Explore Our Massage Services</h2>
-          </div>
-          <div class="services__content">
-            <div class="services__item">
-              <h3 class="services__item-title">Swedish Massage</h3>
-              <p class="services__item-description">
-                Experience a rejuvenating facial session that keeps your skin
-                healthy and glowing. We offer the best treatments to keep you
-                looking young and fresh.
-              </p>
-              <a href="#services-form" class="btn">Learn More</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">Deep Tissue Massage</h3>
-              <p class="services__item-description">
-                Our spa offers a luxurious escape in New York City, providing
-                full-service treatments to melt away stress and rejuvenate your
-                body.
-              </p>
-              <a href="#services-form" class="btn">Learn More</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">Hot Stones Therapy</h3>
-              <p class="services__item-description">
-                Promote health and well-being with our superior treatments and
-                safe spaces. Our team is dedicated to enhancing your overall
-                wellness.
-              </p>
-              <a href="#services-form" class="btn">Learn More</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">Aromatherapy Massage</h3>
-              <p class="services__item-description">
-                Immerse yourself in the soothing scents and calming techniques
-                of our aromatherapy massage, designed to relax your mind and
-                body.
-              </p>
-              <a href="#services-form" class="btn">Learn More</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">Thai Massage</h3>
-              <p class="services__item-description">
-                Experience the unique and invigorating techniques of Thai
-                massage, which combines yoga-like stretching and deep massage to
-                improve flexibility and relieve tension.
-              </p>
-              <a href="#services-form" class="btn">Learn More</a>
-            </div>
-            <div class="services__item">
-              <h3 class="services__item-title">Reflexology</h3>
-              <p class="services__item-description">
-                Revitalize your body through reflexology, which focuses on
-                pressure points in the feet to promote overall health and
-                well-being.
-              </p>
-              <a href="#services-form" class="btn">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="gift-cards">
-        <div class="container">
-          <div class="gift-cards__row">
-            <div class="gift-cards__column col-sm-6">
-              <h2 class="gift-cards__title">Gift cards</h2>
-              <p class="gift-cards__subtitle">GIFT CERTIFICATES</p>
-            </div>
-            <div class="gift-cards__column col-sm-6">
-              <p class="gift-cards__text">
-                We provide the gift of relaxation and beauty. Our gift
-                certificates can be used for any service including massages,
-                haircuts, pedicures, facial treatments, and more.
-              </p>
-            </div>
-          </div>
-          <div class="gift-cards__image-container">
+      <section class="gift section" aria-labelledby="gift-title">
+        <div class="shell gift__layout">
+          <figure>
             <img
-              src="img/gift.webp"
-              alt="Gift Cards Image"
-              class="gift-cards__image"
+              src="img/spa-gift-800.webp"
+              srcset="
+                img/spa-gift-480.webp   480w,
+                img/spa-gift-800.webp   800w,
+                img/spa-gift-1440.webp 1440w
+              "
+              sizes="(max-width: 760px) 100vw, 50vw"
+              width="800"
+              height="533"
+              alt="Плотная бумажная карточка в зелёном конверте на светлом дереве"
+              loading="lazy"
+              decoding="async"
             />
+          </figure>
+          <div>
+            <h2 id="gift-title">Подарить не вещь.<br />Оставить время.</h2>
+            <p>
+              Сертификат для человека, которому хочется сказать: «Побудь немного
+              на своей стороне».
+            </p>
+            <p>
+              Формат и сумму можно обсудить. В демоверсии сертификат не
+              оплачивается и не выпускается.
+            </p>
+            <a class="text-link" href="#booking" data-choose="gift"
+              >Выбрать подарок<img
+                src="img/icon-arrow-up-right.svg"
+                width="20"
+                height="20"
+                alt=""
+                aria-hidden="true"
+            /></a>
           </div>
         </div>
       </section>
-      <section class="pricing">
-        <div class="container">
-          <div class="pricing__header">
-            <h2 class="pricing__title">Our Pricing Table</h2>
+      <section
+        class="booking section"
+        id="booking"
+        aria-labelledby="booking-title"
+      >
+        <div class="shell booking__layout">
+          <div class="booking__intro">
+            <h2 id="booking-title">Давайте оставим<br />время для вас.</h2>
+            <p>
+              Выберите процедуру и удобный день. Если пока не определились —
+              начните с разговора о пожеланиях.
+            </p>
+            <div class="booking__location">
+              <p>Москва. Ежедневно, 10:00–21:00.</p>
+              <a href="mailto:hello@calmoasis.example"
+                >hello@calmoasis.example</a
+              >
+            </div>
+            <p class="booking__demo">
+              Это демонстрационная форма для портфолио. Данные никуда не
+              отправляются; реальная запись и оплата не создаются.
+            </p>
           </div>
-          <div class="pricing__row">
-            <div class="pricing__column">
-              <img
-                src="img/pricing-1.webp"
-                alt="Basic Services"
-                class="pricing__image"
-              />
-              <table class="pricing__table">
-                <thead>
-                  <tr>
-                    <th colspan="2">BASIC</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Target Massage</td>
-                    <td class="pricing__amount">$35</td>
-                  </tr>
-                  <tr>
-                    <td>Exfoliating Body Treatment</td>
-                    <td class="pricing__amount">$60</td>
-                  </tr>
-                  <tr>
-                    <td>Signature Massage</td>
-                    <td class="pricing__amount">$60</td>
-                  </tr>
-                  <tr>
-                    <td>Deep Tissue Massage</td>
-                    <td class="pricing__amount">$70</td>
-                  </tr>
-                  <tr>
-                    <td>Stone Therapy Massage</td>
-                    <td class="pricing__amount">$100</td>
-                  </tr>
-                </tbody>
-              </table>
+          <form
+            class="booking__form"
+            id="visit-form"
+            novalidate
+            aria-labelledby="visit-form-title"
+          >
+            <div class="booking__form-heading">
+              <h3 id="visit-form-title">Запланировать визит</h3>
+              <p>Начните с процедуры, которая подходит вашему дню.</p>
             </div>
-            <div class="pricing__column">
-              <img
-                src="img/pricing-2.webp"
-                alt="Facial Services"
-                class="pricing__image"
-              />
-              <table class="pricing__table">
-                <thead>
-                  <tr>
-                    <th colspan="2">FACIALS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Acne Facial Treatment</td>
-                    <td class="pricing__amount">$65</td>
-                  </tr>
-                  <tr>
-                    <td>Signature Facial</td>
-                    <td class="pricing__amount">$50</td>
-                  </tr>
-                  <tr>
-                    <td>Facial Treatment</td>
-                    <td class="pricing__amount">$55</td>
-                  </tr>
-                  <tr>
-                    <td>Renewing Facial</td>
-                    <td class="pricing__amount">$70</td>
-                  </tr>
-                  <tr>
-                    <td>Skinceutical Medical Treatments</td>
-                    <td class="pricing__amount">$90</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="form-errors" tabindex="-1" hidden>
+              <h3>Проверьте заполнение</h3>
+              <ul></ul>
             </div>
-            <div class="pricing__column">
-              <img
-                src="img/pricing-3.jpeg"
-                alt="Nail Services"
-                class="pricing__image"
-              />
-              <table class="pricing__table">
-                <thead>
-                  <tr>
-                    <th colspan="2">NAILS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Simple Manicure</td>
-                    <td class="pricing__amount">$15</td>
-                  </tr>
-                  <tr>
-                    <td>Simple Pedicure</td>
-                    <td class="pricing__amount">$20</td>
-                  </tr>
-                  <tr>
-                    <td>Signature Manicure</td>
-                    <td class="pricing__amount">$25</td>
-                  </tr>
-                  <tr>
-                    <td>Ahh Manicure</td>
-                    <td class="pricing__amount">$30</td>
-                  </tr>
-                  <tr>
-                    <td>Ahh Pedicure</td>
-                    <td class="pricing__amount">$35</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="testimonials">
-        <div class="container">
-          <div class="testimonials__header">
-            <h2 class="testimonials__title">
-              Client Experiences at Calm Oasis Spa
-            </h2>
-          </div>
-          <div class="testimonials__content">
-            <div class="testimonials__item">
-              <div class="testimonials__image_wrap">
-                <img
-                  src="img/marks.svg"
-                  alt="Testimonial Image"
-                  class="testimonials__image"
-                />
-              </div>
-              <p class="testimonials__text">
-                Calm Oasis Spa offers the best in relaxation with their seasonal
-                treatments. The quality of service and products is unmatched.
-                Truly a rejuvenating experience!
-              </p>
-              <h3 class="testimonials__author">Alice Johnson</h3>
-            </div>
-            <div class="testimonials__item">
-              <div class="testimonials__image_wrap">
-                <img
-                  src="img/marks.svg"
-                  alt="Testimonial Image"
-                  class="testimonials__image"
-                />
-              </div>
-              <p class="testimonials__text">
-                The spa's dedication to community wellness through superior
-                treatments and education is commendable. It’s a sanctuary for
-                health and relaxation.
-              </p>
-              <h3 class="testimonials__author">Michael Brown</h3>
-            </div>
-            <div class="testimonials__item">
-              <div class="testimonials__image_wrap">
-                <img
-                  src="img/marks.svg"
-                  alt="Testimonial Image"
-                  class="testimonials__image"
-                />
-              </div>
-              <p class="testimonials__text">
-                For a day of peace and pampering, Calm Oasis Spa is the place to
-                be. The atmosphere and service are exceptional, making every
-                visit special.
-              </p>
-              <h3 class="testimonials__author">Sarah Thompson</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="reservation" id="services-form">
-        <div class="container">
-          <div class="reservation__content">
-            <p class="reservation__title">Book Your Relaxation</p>
-            <p class="reservation__subtitle">SCHEDULE YOUR SESSION</p>
-            <form class="reservation__form" id="contact_form">
-              <input
-                type="text"
-                id="name"
-                class="reservation__input"
-                placeholder="Your Name*"
-                required
-              />
-              <input
-                type="email"
-                id="email"
-                class="reservation__input"
-                placeholder="Your Email*"
-                required
-              />
-              <textarea
-                id="message"
-                class="reservation__textarea"
-                rows="3"
-                placeholder="Your Message*"
-                required
-              ></textarea>
-              <div class="form-checkbox flex">
-                <input
-                  type="checkbox"
-                  name="privacy"
-                  value="on"
-                  id="checkbox"
+            <fieldset disabled class="booking__fields">
+              <legend class="sr-only">Параметры визита и контакты</legend>
+              <div class="field">
+                <label for="treatment"
+                  >С чего начнём? <span>обязательно</span></label
+                ><select
+                  id="treatment"
+                  name="treatment"
                   required
-                />
-                <a for="privacy" href="privacy-policy.html"
-                  >I accept Privacy policy</a
+                  aria-describedby="treatment-error"
+                >
+                  <option value="">Выберите процедуру</option>
+                  <option value="relax">Расслабляющий массаж · 60 мин</option>
+                  <option value="deep">Глубокий массаж · 60 мин</option>
+                  <option value="stone">Массаж тёплыми камнями · 75 мин</option>
+                  <option value="aroma">Аромамассаж · 60 мин</option>
+                  <option value="thai">Тайский массаж · 60 мин</option>
+                  <option value="feet">Массаж стоп · 30 мин</option>
+                  <option value="local">Локальный массаж · 30 мин</option>
+                  <option value="scrub">Скраб для тела · 45 мин</option>
+                  <option value="balance">Балансирующий уход · 60 мин</option>
+                  <option value="facial">Базовый уход за лицом · 45 мин</option>
+                  <option value="personal">Индивидуальный уход · 60 мин</option>
+                  <option value="renew">Обновляющий уход · 60 мин</option>
+                  <option value="extended">Расширенный уход · 75 мин</option>
+                  <option value="manicure">
+                    Маникюр без покрытия · 45 мин
+                  </option>
+                  <option value="pedicure">
+                    Педикюр без покрытия · 60 мин
+                  </option>
+                  <option value="handcare">Маникюр с уходом · 60 мин</option>
+                  <option value="hands">Уход для рук · 30 мин</option>
+                  <option value="footcare">Уход для стоп · 45 мин</option>
+                  <option value="consult">Помогите выбрать</option>
+                  <option value="gift">Подарочный сертификат</option>
+                </select>
+                <p class="field__error" id="treatment-error" hidden></p>
+              </div>
+              <div
+                class="booking__selection"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                <p data-selection-name>Выбор за вами</p>
+                <p data-selection-meta>
+                  Длительность и стоимость появятся здесь.
+                </p>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="visitor-name"
+                    >Ваше имя <span>обязательно</span></label
+                  ><input
+                    id="visitor-name"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="100"
+                    required
+                    aria-describedby="visitor-name-error"
+                  />
+                  <p class="field__error" id="visitor-name-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="visitor-email"
+                    >Email <span>обязательно</span></label
+                  ><input
+                    id="visitor-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                    aria-describedby="visitor-email-error"
+                  />
+                  <p class="field__error" id="visitor-email-error" hidden></p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="visitor-phone"
+                    >Телефон <span>необязательно</span></label
+                  ><input
+                    id="visitor-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    maxlength="30"
+                    aria-describedby="visitor-phone-error"
+                  />
+                  <p class="field__error" id="visitor-phone-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="visit-day"
+                    >Желаемый день <span>необязательно</span></label
+                  ><input
+                    id="visit-day"
+                    name="day"
+                    type="date"
+                    aria-describedby="visit-day-note"
+                  />
+                  <p class="field__hint" id="visit-day-note">
+                    Не подтверждает свободное время.
+                  </p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="visitor-message"
+                  >Что для вас важно? <span>необязательно</span></label
+                ><textarea
+                  id="visitor-message"
+                  name="message"
+                  rows="2"
+                  maxlength="1000"
+                  placeholder="Например, предпочтения по темпу и интенсивности"
+                ></textarea>
+              </div>
+              <div class="consent">
+                <input
+                  id="consent"
+                  type="checkbox"
+                  required
+                  aria-describedby="consent-error"
+                /><label for="consent"
+                  >Я ознакомился с
+                  <a href="privacy-policy.html">информацией о данных</a> и
+                  <a href="terms-conditions.html">условиями демоверсии</a
+                  >.</label
                 >
               </div>
-              <button type="submit" class="btn">SEND</button>
-            </form>
-          </div>
+              <p class="field__error" id="consent-error" hidden></p>
+              <button class="button booking__submit" type="submit">
+                Проверить мой выбор<img
+                  loading="lazy"
+                  src="img/icon-arrow-right.svg"
+                  width="20"
+                  height="20"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+              <p class="form-status" role="status"></p>
+            </fieldset>
+            <noscript
+              ><p>
+                Для проверки формы нужен JavaScript. Все процедуры и цены
+                доступны на странице услуг.
+              </p></noscript
+            >
+          </form>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div class="social__content">
-          <a href="index.html" class="header__logo logo">
-            <img src="img/logo.png" alt="logo" />
-          </a>
-          ©. All rights reserved.
-          <div class="footer_bot flex">
-            <a href="privacy-policy.html" class="footer__bot-policy"
-              >Privacy policy</a
+      <div class="shell">
+        <div class="footer__top">
+          <p class="footer__invitation">
+            Оставьте немного<br />времени для себя.
+          </p>
+          <a class="footer__cta" href="#booking"
+            >Начать с одной процедуры<img
+              src="img/icon-arrow-up-right.svg"
+              width="20"
+              height="20"
+              alt=""
+              aria-hidden="true"
+          /></a>
+        </div>
+        <div class="footer__grid">
+          <div>
+            <a
+              class="brand"
+              href="index.html"
+              aria-label="Calm Oasis Spa — главная"
+              ><img
+                src="img/brand-mark-64.png"
+                width="44"
+                height="44"
+                alt=""
+              /><span class="brand__type"
+                >calm oasis<span class="brand__caption"
+                  >городской спа</span
+                ></span
+              ></a
             >
-            <a href="terms-conditions.html" class="footer__bot-policy"
-              >Terms and Conditions</a
-            >
+            <p class="footer__description">
+              Тёплое отношение.<br />Спокойный темп.<br />Ваши собственные
+              ощущения.
+            </p>
           </div>
+          <nav aria-label="Навигация в подвале">
+            <a href="services.html">Процедуры и цены</a
+            ><a href="index.html#portfolio">Наше пространство</a
+            ><a href="index.html#blog">Перед визитом</a
+            ><a href="#booking">Демонстрационная запись</a>
+          </nav>
+          <div>
+            <p>Москва, ул. Тихая, 8</p>
+            <p class="small">Вымышленный адрес для концепта.</p>
+            <a href="tel:+74950000000">+7 (495) 000-00-00</a
+            ><a href="mailto:hello@calmoasis.example"
+              >hello@calmoasis.example</a
+            >
+            <p>Ежедневно, 10:00–21:00</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Calm Oasis Spa · Портфолио-концепт</p>
+          <div>
+            <a href="privacy-policy.html">Личные данные</a
+            ><a href="terms-conditions.html">Условия демоверсии</a>
+          </div>
+          <a href="#main">К началу страницы</a>
         </div>
       </div>
     </footer>
+    <dialog
+      class="photo-dialog"
+      id="photo-view"
+      aria-label="Фотография пространства"
+    >
+      <button
+        class="icon-button"
+        type="button"
+        data-close-dialog
+        aria-label="Закрыть фотографию"
+      >
+        <img
+          src="img/icon-x.svg"
+          width="20"
+          height="20"
+          alt=""
+          aria-hidden="true"
+        /></button
+      ><img width="1440" height="960" alt="" data-full-photo />
+    </dialog>
+    <div
+      class="live-status sr-only"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
   </body>
 </html>
